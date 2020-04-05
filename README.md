@@ -2,7 +2,7 @@
 
 | URL                          | HTTP Method | Description            | Request Object                                               | Response Object                                                                                    |
 | ---------------------------- | ----------- | ---------------------- | ------------------------------------------------------------ | -------------------------------------------------------------------------------------------------- |
-| /api/v1/listings             | GET         | Get listings           | n/a                                                          | {listings: [,date_published: date,space_type: string,is_shared: boolean,location_id: integer,]}    |
+| /api/v1/listings             | GET         | Get listings           | n/a                                                          | {listings: [date_published: date,space_type: string,is_shared: boolean,location_id: integer]}      |
 | /api/v1/listings/:id         | GET         | Get listing by id      | { listing_id:integer }                                       | {user_id: integer,date_published: date,space_type: string,is_shared: boolean,location_id: integer} |
 | /api/v1/listings             | POST        | Add listing            | {space_type: string,is_shared: boolean,location_id: integer} | {listing_id: integer,space_type: string,is_shared: boolean,location_id: integer,user_id: integer}  |
 | /api/v1/listings:id          | PUT         | Edit listing           | {listing_id: integer,user_id: integer }                      | {space_type: string,is_shared: boolean,location_id: integer                                        |
