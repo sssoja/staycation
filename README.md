@@ -36,7 +36,7 @@ Run node model/database.js in your TERMINAL, in the root folder of your project 
 - You can test your client app in `http://localhost:3000`
 - You can test your API in `http://localhost:5000/api`
 
-#### Userflows
+#### Product Userflows
 
 ![Userflow mapping](/design/userflow-design.png "My MVP userflow design")
 
@@ -67,3 +67,5 @@ Recreated from and inspired by, Al Madireddy's article:
 ### Future features
 
 - Integration with Google Maps API and [Numbeo](https://www.numbeo.com/common/api.jsp).
+
+_This is a student project that was created at [CodeOp](http://codeop.tech), a full stack development bootcamp in Barcelona._
