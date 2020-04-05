@@ -38,6 +38,12 @@ Run node model/database.js in your TERMINAL, in the root folder of your project 
 
 #### USERFLOW
 
+![Userflow mapping](/design/userflow-design.png "My MVP userflow design")
+
+#### DATABASE DESIGN
+
+![Database mapping](/design/db-schema.png "My MVP database design")
+
 #### URL MAPPING
 
 | URL                          | HTTP Method | Description            | Request Object                                               | Response Object                                                                                    |
