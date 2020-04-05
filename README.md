@@ -66,6 +66,6 @@ Recreated from and inspired by, Al Madireddy's article:
 
 ### Future features
 
-- Integration with Google Maps API and [Numbeo](https://www.numbeo.com/common/api.jsp).
+- Integration with Google Maps API, SendGrid and [Numbeo](https://www.numbeo.com/common/api.jsp).
 
 _This is a student project that was created at [CodeOp](http://codeop.tech), a full stack development bootcamp in Barcelona._
