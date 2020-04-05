@@ -36,15 +36,15 @@ Run node model/database.js in your TERMINAL, in the root folder of your project 
 - You can test your client app in `http://localhost:3000`
 - You can test your API in `http://localhost:5000/api`
 
-#### USERFLOW
+#### Userflows
 
 ![Userflow mapping](/design/userflow-design.png "My MVP userflow design")
 
-#### DATABASE DESIGN
+#### Database Design
 
 ![Database mapping](/design/db-schema.png "My MVP database design")
 
-#### URL MAPPING
+#### URL Mapping
 
 | URL                          | HTTP Method | Description            | Request Object                                               | Response Object                                                                                    |
 | ---------------------------- | ----------- | ---------------------- | ------------------------------------------------------------ | -------------------------------------------------------------------------------------------------- |
@@ -57,7 +57,7 @@ Run node model/database.js in your TERMINAL, in the root folder of your project 
 | /api/v1/users/bookings/:id/  | POST        | Add review             | {rating: integer,review_body: string,booking_id: integer}    | {rating: integer,review_body: string,user_id: integer}                                             |
 | /api/v1/listings/:id/reviews | GET         | Get reviews by listing | {listing_id: integer}                                        | {rating: integer,review_body: string}                                                              |
 
-#### FULL STACK ARCHITECTURE
+#### Full stack framework
 
 ![Full stack design](/design/fs-design.png "My MVP full stack design")
 
