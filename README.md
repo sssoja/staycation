@@ -53,7 +53,6 @@ Run node model/database.js in your TERMINAL, in the root folder of your project 
 
 #### FULL STACK ARCHITECTURE
 
-Inline-style:
 ![Full stack design](/design/fs-design.png "My MVP full stack design")
 
 Recreated from and inspired by, Al Madireddy's article:
@@ -61,6 +60,4 @@ Recreated from and inspired by, Al Madireddy's article:
 
 ### Future features
 
-```
-
-```
+- Integration with Google Maps API and [Numbeo](https://www.numbeo.com/common/api.jsp).
