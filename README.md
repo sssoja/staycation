@@ -16,8 +16,9 @@ cd `client` and run yarn install dependencies related to React.
 
 Create `.env` file in project directory and add
 
-````DB_NAME=staycation
-DB_PASS=YOUR_PASSWORD```
+```DB_NAME=staycation
+DB_PASS=YOUR_PASSWORD
+```
 
 Type `mysql -u root -p` to access the MySQL CLI using your password.
 
@@ -29,11 +30,11 @@ Run node model/database.js in your TERMINAL, in the root folder of your project 
 
 ### Run Your Development Servers
 
-+ Run `yarn start` in project directory to start the Express server on port 5000
-+ `cd` client and run `yarn start` to start client server in development mode with hot reloading in port 3000.
-+ Client is configured so all API calls will be proxied to port 5000
-+ You can test your client app in `http://localhost:3000`
-+ You can test your API in `http://localhost:5000/api`
+- Run `yarn start` in project directory to start the Express server on port 5000
+- `cd` client and run `yarn start` to start client server in development mode with hot reloading in port 3000.
+- Client is configured so all API calls will be proxied to port 5000
+- You can test your client app in `http://localhost:3000`
+- You can test your API in `http://localhost:5000/api`
 
 #### USERFLOW
 
@@ -59,4 +60,7 @@ Recreated from and inspired by, Al Madireddy's article:
 [Designing A Web App Architecture](https://dev.to/almadireddy/full-stack-101-2-designing-our-web-app-architecture-l6a)
 
 ### Future features
-````
+
+```
+
+```
