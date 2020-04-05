@@ -1,8 +1,8 @@
-# my-first-mvp
+# my-first-mvp README :pushpin:
 
 ## staycation
 
-staycation is a global exchange platform where users can swap their homes for as little or as long as they want.
+staycation is a global exchange platform where users can swap their homes for as little, or as long, as they want.
 
 ## Getting started
 
@@ -26,7 +26,7 @@ In the MySQL CLI, type `create database staycation`; to create a database in MyS
 
 Run the following in the MySQL CLI: `ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'YOUR_PASSWORD'`;
 
-Run node model/database.js in your TERMINAL, in the root folder of your project (not your MySQL CLI! Open a new terminal window for this). This will create 5 tables called 'listings', 'users', 'bookings', 'locations' and 'reviews' in your database.
+Run `node model/database.js` in your TERMINAL, in the root folder of your project (not your MySQL CLI! Open a new terminal window for this). This will create 5 tables called 'listings', 'users', 'bookings', 'locations' and 'reviews' in your database.
 
 ### Run Your Development Servers
 
@@ -34,7 +34,7 @@ Run node model/database.js in your TERMINAL, in the root folder of your project 
 - `cd` client and run `yarn start` to start client server in development mode with hot reloading in port 3000.
 - Client is configured so all API calls will be proxied to port 5000
 - You can test your client app in `http://localhost:3000`
-- You can test your API in `http://localhost:5000/api`
+- You can test your API in `http://localhost:5000`
 
 #### Product Userflows
 
@@ -51,7 +51,7 @@ Run node model/database.js in your TERMINAL, in the root folder of your project 
 | /api/v1/listings             | GET         | Get listings           | n/a                                                          | {listings: [date_published: date,space_type: string,is_shared: boolean,location_id: integer]}      |
 | /api/v1/listings/:id         | GET         | Get listing by id      | { listing_id:integer }                                       | {user_id: integer,date_published: date,space_type: string,is_shared: boolean,location_id: integer} |
 | /api/v1/listings             | POST        | Add listing            | {space_type: string,is_shared: boolean,location_id: integer} | {listing_id: integer,space_type: string,is_shared: boolean,location_id: integer,user_id: integer}  |
-| /api/v1/listings:id          | PUT         | Edit listing           | {listing_id: integer,user_id: integer }                      | {space_type: string,is_shared: boolean,location_id: integer                                        |
+| /api/v1/listings:id          | PUT         | Edit listing           | {listing_id: integer,user_id: integer }                      | {space_type: string,is_shared: boolean,location_id: integer}                                       |
 | /api/v1/listings:id          | DELETE      | Delete listing         | n/a                                                          | {}                                                                                                 |
 | /api/v1/users/:id/bookings   | GET         | Get bookings by user   | {user_id: integer,}                                          | {booking_id: integer}                                                                              |
 | /api/v1/users/bookings/:id/  | POST        | Add review             | {rating: integer,review_body: string,booking_id: integer}    | {rating: integer,review_body: string,user_id: integer}                                             |
