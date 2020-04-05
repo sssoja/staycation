@@ -2,7 +2,7 @@
 
 ## staycation
 
-staycation is a money-less exchange platform where users can swap their homes for as little or as long as they want.
+staycation is a global exchange platform where users can swap their homes for as little or as long as they want.
 
 ## Getting started
 
