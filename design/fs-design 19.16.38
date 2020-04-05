@@ -1,0 +1,38 @@
+
+
+                                    +---------------+
++-----------------------+           |               |
+|                       |           |   External    |
+|   Node.js & Express   |           |     API(s)    |
+|        Backend        <----------+                |     
+|                       +---------->                +----------+
++-----------------------+           +---------------+          |
+        ||                                                     | 
+        ||                                                     |
+        ||                                            +--------V--------+
+        ||                                            |                 |
+        ||                                            |  User's Inbox   |        
+        ||                                            |                 |
+        ||                                            +-----------------+
+        ||                                  
+        ||         +--------------------+
+        |---------->                    |
+        +----------+   React Frontend   |        
+                   |                    |
+                   +--------^^----------+
+                            ||
+                            ||
+                            ||
+                   +--------vv---------+
+                   |                    |
+                   |   User's computer  |           
+                   |                    |
+                   +--------------------+
+
+
+
+(ASCII art because we are c o o l )
+
+Recreated from and inspired by, Al Madireddy's article: 
+[Designing A Web App Architecture]
+(https://dev.to/almadireddy/full-stack-101-2-designing-our-web-app-architecture-l6a)
