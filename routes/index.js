@@ -1,9 +1,9 @@
 var express = require("express");
 var router = express.Router();
-const db = require("../model/helper");
 
-const usersFunctions = require("./users.js");
-const listingsFunctions = require("./listings.js");
+// HTTP Methods
+const userFunctions = require("./users.js");
+const listingFunctions = require("./listings.js");
 
 router.get("/", (req, res, next) => {
   res.send("Welcome to the staycation API");
