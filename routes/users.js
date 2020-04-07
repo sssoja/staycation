@@ -1,9 +1,26 @@
-var express = require('express');
-var router = express.Router();
+var express = require("express");
 
-/* GET users listing. */
-router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
-});
+function getUsers(req, res) {
+  db("SELECT * FROM users ORDER BY id ASC;")
+    .then((results) => {
+      res.send(results.data);
+    })
+    .catch((err) => res.status(500).send(err));
+}
 
-module.exports = router;
+function createUser(req, res) {
+  console.log(req.body);
+  db(`INSERT INTO users (email, phone_number, num_country_code, name, preferred_contact_method) VALUES 
+  ("${req.body.email}",${req.body.phone_number}","${req.body.num_country_code}","${req.body.name}","${req.body.preferred_contact_method}");`)
+    .then((results) => {
+      res.send(results.data);
+    })
+    .catch((err) => res.status(500).send(err));
+}
+
+module.exports = {
+  getUsers,
+  createUser,
+  //   getUserById,
+  //   updateUser,
+};

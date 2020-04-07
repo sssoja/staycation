@@ -57,9 +57,13 @@ Run `node model/database.js` in your TERMINAL, in the root folder of your projec
 | /api/v1/users/bookings/:id/  | POST        | Add review             | {rating: integer,review_body: string,booking_id: integer}    | {rating: integer,review_body: string,user_id: integer}                                             |
 | /api/v1/listings/:id/reviews | GET         | Get reviews by listing | {listing_id: integer}                                        | {rating: integer,review_body: string}                                                              |
 
+#### Route File Structuring
+
+![Route files](/design/fs-design.png "My route files structure")
+
 #### Full Stack Framework
 
-![Full stack design](/design/fs-design.png "My MVP full stack design")
+![Full stack design](/design/routes-file-structuring.png "My MVP full stack design")
 
 Recreated from and inspired by, Al Madireddy's article:
 [Designing A Web App Architecture](https://dev.to/almadireddy/full-stack-101-2-designing-our-web-app-architecture-l6a)
