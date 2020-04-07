@@ -19,11 +19,28 @@ con.connect(function (err) {
   console.log("Connected!");
 
   //edit this to create database tables
-  let sql =
-    "DROP TABLE if exists listings; CREATE TABLE listings(id INT NOT NULL AUTO_INCREMENT, email VARCHAR(40) UNIQUE NOT NULL, phone_number INTEGER UNIQUE, num_country_code INTEGER, name VARCHAR(40), preferred_contact_method VARCHAR(40), PRIMARY KEY (id));";
-  con.query(sql, function (err, result) {
+  let sql =  
+    // Here we are making sure to wipe out any tables that already exist!
+    "DROP TABLE if exists users; DROP TABLE if exists listings; DROP TABLE if exists locations; DROP TABLE if exists bookings; DROP TABLE if exists reviews; " +
+    // Here we actually create the tables
+    "CREATE TABLE users ( id integer PRIMARY KEY, email nvarchar(255) UNIQUE NOT NULL, phone_number integer UNIQUE, num_country_code integer, name nvarchar(255), preferred_contact_method nvarchar(255) ); " +
+    "CREATE TABLE listings ( id integer PRIMARY KEY, user_id integer, date_published date, space_type nvarchar(255), is_shared boolean, location_id integer, reviews_id integer ); " +
+    "CREATE TABLE locations ( id integer PRIMARY KEY, street_name nvarchar(255), city_name nvarchar(255), latitude float, longitude float ); " +
+    "CREATE TABLE bookings ( id integer PRIMARY KEY, user_id integer, listing_id integer, start_date date, end_date date ); " +   
+    "CREATE TABLE reviews ( id integer PRIMARY KEY, booking_id integer, rating tinyint, review_body text ); " +
+    // Here we enforce referencial integrity through foreign keys
+    "ALTER TABLE listings ADD FOREIGN KEY (user_id) REFERENCES users (id); " +
+    "ALTER TABLE listings ADD FOREIGN KEY (reviews_id) REFERENCES reviews (id); " +
+    "ALTER TABLE bookings ADD FOREIGN KEY (user_id) REFERENCES users (id); " +
+    "ALTER TABLE bookings ADD FOREIGN KEY (listing_id) REFERENCES listings (id); " +
+    "ALTER TABLE reviews ADD FOREIGN KEY (booking_id) REFERENCES bookings (id); "
+
+    ;
+
+  
+    con.query(sql, function (err, result) {
     if (err) throw err;
-    console.log("Table creation `listings` was successful!");
+    console.log("Table creation: `users`, `listings`, `locations`, `bookings` was successful!");
 
     console.log("Closing...");
   });
