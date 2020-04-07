@@ -35,22 +35,19 @@ Run `node model/database.js` in your TERMINAL, in the root folder of your projec
 - Client is configured so all API calls will be proxied to port 5000
 - You can test your client app in `http://localhost:3000`
 - You can test your API in `http://localhost:5000`
-
-&nbsp;
+  &nbsp;
 
 #### Product Userflows
 
 ![Userflow mapping](/design/userflow-design.png "My MVP userflow design")
+&nbsp;
 
 #### Database Design
 
-&nbsp;
-
 ![Database mapping](/design/db-schema.png "My MVP database design")
+&nbsp;
 
 #### URL Mapping
-
-&nbsp;
 
 | URL                          | HTTP Method | Description            | Request Object                                               | Response Object                                                                                    |
 | ---------------------------- | ----------- | ---------------------- | ------------------------------------------------------------ | -------------------------------------------------------------------------------------------------- |
@@ -67,8 +64,7 @@ Run `node model/database.js` in your TERMINAL, in the root folder of your projec
 
 #### Route File Structuring
 
-![Route files](/design/routes-file-structuring.png "My route files structure")
-
+![API route files structure](/design/api-routes-file-structure.png "My API routes file structure")
 &nbsp;
 
 #### Full Stack Framework
