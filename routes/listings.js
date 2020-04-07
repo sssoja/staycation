@@ -20,6 +20,6 @@ function createListing(req, res) {
 module.exports = {
   getListings,
   createListing,
-  //   getUListingById,
+  //   getListingById,
   //   updateListing,
 };
