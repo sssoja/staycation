@@ -37,7 +37,6 @@ Run `node model/database.js` in your TERMINAL, in the root folder of your projec
 - You can test your API in `http://localhost:5000`
 
 &nbsp;
-&nbsp;
 
 #### Product Userflows
 
@@ -46,13 +45,11 @@ Run `node model/database.js` in your TERMINAL, in the root folder of your projec
 #### Database Design
 
 &nbsp;
-&nbsp;
 
 ![Database mapping](/design/db-schema.png "My MVP database design")
 
 #### URL Mapping
 
-&nbsp;
 &nbsp;
 
 | URL                          | HTTP Method | Description            | Request Object                                               | Response Object                                                                                    |
@@ -67,13 +64,11 @@ Run `node model/database.js` in your TERMINAL, in the root folder of your projec
 | /api/v1/listings/:id/reviews | GET         | Get reviews by listing | {listing_id: integer}                                        | {rating: integer,review_body: string}                                                              |
 
 &nbsp;
-&nbsp;
 
 #### Route File Structuring
 
 ![Route files](/design/routes-file-structuring.png "My route files structure")
 
-&nbsp;
 &nbsp;
 
 #### Full Stack Framework
