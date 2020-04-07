@@ -26,7 +26,7 @@ In the MySQL CLI, type `create database staycation`; to create a database in MyS
 
 Run the following in the MySQL CLI: `ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'YOUR_PASSWORD'`;
 
-Run `node model/database.js` in your TERMINAL, in the root folder of your project (not your MySQL CLI! Open a new terminal window for this). This will create 5 tables called 'listings', 'users', 'bookings', 'locations' and 'reviews' in your database.
+Run `node model/database.js` in your TERMINAL, in the root folder of your project. This will create 5 tables called 'listings', 'users', 'bookings', 'locations' and 'reviews' in your database.
 
 ### Run Your Development Servers
 
@@ -57,7 +57,7 @@ Run `node model/database.js` in your TERMINAL, in the root folder of your projec
 | /api/v1/users/bookings/:id/  | POST        | Add review             | {rating: integer,review_body: string,booking_id: integer}    | {rating: integer,review_body: string,user_id: integer}                                             |
 | /api/v1/listings/:id/reviews | GET         | Get reviews by listing | {listing_id: integer}                                        | {rating: integer,review_body: string}                                                              |
 
-#### Full stack framework
+#### Full Stack Framework
 
 ![Full stack design](/design/fs-design.png "My MVP full stack design")
 

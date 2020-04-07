@@ -1,34 +1,38 @@
-CREATE TABLE [users] (
+CREATE TABLE [users]
+(
   [id] integer PRIMARY KEY,
-  [email] nvarchar(255) UNIQUE NOT NULL,
+  [email] nvarchar(40) UNIQUE NOT NULL,
   [phone_number] integer UNIQUE,
   [num_country_code] integer,
-  [name] nvarchar(255),
-  [preferred_contact_method] nvarchar(255)
+  [name] nvarchar(25),
+  [preferred_contact_method] nvarchar(25)
 )
 GO
 
-CREATE TABLE [listings] (
+CREATE TABLE [listings]
+(
   [id] integer PRIMARY KEY,
   [user_id] integer,
   [date_published] date,
-  [space_type] nvarchar(255),
+  [space_type] nvarchar(25),
   [is_shared] boolean,
   [location_id] integer,
   [reviews_id] integer
 )
 GO
 
-CREATE TABLE [locations] (
+CREATE TABLE [locations]
+(
   [id] integer PRIMARY KEY,
-  [street_name] nvarchar(255),
-  [city_name] nvarchar(255),
+  [street_name] nvarchar(40),
+  [city_name] nvarchar(40),
   [latitude] float,
   [longitude] float
 )
 GO
 
-CREATE TABLE [bookings] (
+CREATE TABLE [bookings]
+(
   [id] integer PRIMARY KEY,
   [user_id] integer,
   [listing_id] integer,
@@ -37,7 +41,8 @@ CREATE TABLE [bookings] (
 )
 GO
 
-CREATE TABLE [reviews] (
+CREATE TABLE [reviews]
+(
   [id] integer PRIMARY KEY,
   [booking_id] integer,
   [rating] tinyint,

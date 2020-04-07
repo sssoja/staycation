@@ -20,10 +20,10 @@ con.connect(function (err) {
 
   //edit this to create database tables
   let sql =
-    "DROP TABLE if exists listings; CREATE TABLE listings(id INT NOT NULL AUTO_INCREMENT, email VARCHAR(40) UNIQUE NOT NULL, phone_number INTEGER UNIQUE, num_country_code INTEGER, name VARCHAR(40), preferred_contact_method VARCHAR(40), PRIMARY KEY (id));";
+    "DROP TABLE if exists items; CREATE TABLE items(id INT NOT NULL AUTO_INCREMENT, text VARCHAR(40) not null, complete BOOLEAN, PRIMARY KEY (id));";
   con.query(sql, function (err, result) {
     if (err) throw err;
-    console.log("Table creation `listings` was successful!");
+    console.log("Table creation `items` was successful!");
 
     console.log("Closing...");
   });
