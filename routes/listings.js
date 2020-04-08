@@ -1,5 +1,6 @@
 var express = require("express");
 var router = express.Router();
+const db = require("../model/helper");
 
 function getListings(req, res) {
   db("SELECT * FROM listings ORDER BY id ASC;")
@@ -25,5 +26,3 @@ module.exports = {
   //   updateListing,
   //   deleteListing
 };
-
-module.exports = router;

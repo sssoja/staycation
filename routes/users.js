@@ -1,5 +1,6 @@
 var express = require("express");
 var router = express.Router();
+const db = require("../model/helper");
 
 function getUsers(req, res) {
   db("SELECT * FROM users ORDER BY id ASC;")
@@ -13,7 +14,7 @@ function getUsers(req, res) {
 function createUser(req, res) {
   console.log(req.body);
   db(`INSERT INTO users (email, phone_number, num_country_code, name, preferred_contact_method) VALUES 
-  ("${req.body.email}",${req.body.phone_number}","${req.body.num_country_code}","${req.body.name}","${req.body.preferred_contact_method}");`)
+  ("${req.body.email}","${req.body.phone_number}","${req.body.num_country_code}","${req.body.name}","${req.body.preferred_contact_method}");`)
     .then((results) => {
       getUsers(req, res);
     })
@@ -27,5 +28,3 @@ module.exports = {
   //   updateUser,
   //   deleteUser
 };
-
-module.exports = router;
