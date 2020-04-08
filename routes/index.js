@@ -9,10 +9,10 @@ router.get("/", (req, res, next) => {
   res.send("Welcome to the staycation API");
 });
 
-router.get("/users", usersFunctions.getUsers);
-router.post("/users", usersFunctions.createUser);
+router.get("/users", userFunctions.getUsers);
+router.post("/users", userFunctions.createUser);
 
-router.get("/listings", listingsFunctions.getListings);
-router.post("/listings", listingsFunctions.createListing);
+router.get("/listings", listingFunctions.getListings);
+router.post("/listings", listingFunctions.createListing);
 
 module.exports = router;
