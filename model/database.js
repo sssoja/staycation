@@ -7,19 +7,19 @@ const DB_PASS = process.env.DB_PASS;
 const DB_NAME = process.env.DB_NAME;
 
 const con = mysql.createConnection({
-  host: DB_HOST || "127.0.0.1",
-  user: DB_USER || "root",
-  password: DB_PASS,
-  database: DB_NAME || "staycation",
-  multipleStatements: true,
+    host: DB_HOST || "127.0.0.1",
+    user: DB_USER || "root",
+    password: DB_PASS || "root",
+    database: DB_NAME || "staycation",
+    multipleStatements: true,
 });
 
-con.connect(function (err) {
-  if (err) throw err;
-  console.log("Connected!");
+con.connect(function(err) {
+    if (err) throw err;
+    console.log("Connected!");
 
-  //edit this to create database tables
-  let sql =
+    //edit this to create database tables
+    let sql = "";
     // Here we are making sure to wipe out any tables that already exist!
     "SET FOREIGN_KEY_CHECKS = 0; " +
 
@@ -39,14 +39,14 @@ con.connect(function (err) {
     "SET FOREIGN_KEY_CHECKS = 1; "
     ;
 
-  con.query(sql, function (err, result) {
-    if (err) throw err;
-    console.log(
-      "Table creation: `users`, `listings`, `locations`, `bookings` was successful!"
-    );
+    con.query(sql, function(err, result) {
+        if (err) throw err;
+        console.log(
+            "Table creation: `users`, `listings`, `locations`, `bookings` was successful!"
+        );
 
-    console.log("Closing...");
-  });
+        console.log("Closing...");
+    });
 
-  con.end();
+    con.end();
 });
