@@ -19,7 +19,7 @@ con.connect(function(err) {
     console.log("Connected!");
 
     //edit this to create database tables
-    let sql = "";
+    let sql =
     // Here we are making sure to wipe out any tables that already exist!
     "SET FOREIGN_KEY_CHECKS = 0; " +
 
